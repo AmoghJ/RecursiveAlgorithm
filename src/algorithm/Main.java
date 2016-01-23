@@ -16,6 +16,7 @@ public class Main
 		JFrame frame = new JFrame("Recursive Algorithm");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(new TextPanel());
+		frame.setResizable(false);
 		frame.pack();
 		frame.setVisible(true);
 	}
@@ -55,17 +56,17 @@ public class Main
 				
 				fileWriter.closeWriteToFile();
 				
-				JOptionPane.showMessageDialog(null, "Computed at: " + location, "InfoBox", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Done!", "InfoBox", JOptionPane.INFORMATION_MESSAGE);
 			}
 			catch(IOException e)
 			{
-				JOptionPane.showMessageDialog(null, e.getMessage() + location, "InfoBox", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, e.getMessage(), "InfoBox", JOptionPane.INFORMATION_MESSAGE);
 				return;
 			}
 		}
 		else
 		{
-			JOptionPane.showMessageDialog(null, "Invalid Arguments" + location, "InfoBox", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Invalid Arguments", "InfoBox", JOptionPane.INFORMATION_MESSAGE);
 			return;
 		}
 	}
