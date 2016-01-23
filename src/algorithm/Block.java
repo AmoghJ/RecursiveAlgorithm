@@ -17,7 +17,7 @@ public class Block
 	
 	public void markValues()
 	{
-Block blocks[] = getSideBlocks();
+		Block blocks[] = getSideBlocks();
 		
 		for(int i = 0; i < 8; i++)
 		{
