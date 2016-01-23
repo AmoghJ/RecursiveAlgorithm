@@ -39,34 +39,32 @@ public class RecursiveAlgorithm
 			for(int j = 0; j < height; j++)
 			{
 				tempBlock = blocks[j][i];
-				tempBlock.posX = i;
-				tempBlock.posY = j;
 				
 				if(i - 1 > -1)
-					tempBlock.lBlock = blocks[j][i-1];
+					tempBlock.sideBlocks[7] = blocks[j][i-1];
 				if(i + 1 < width)
-					tempBlock.rBlock = blocks[j][i+1];
+					tempBlock.sideBlocks[3] = blocks[j][i+1];
 				
 				if(j - 1 > -1)
 				{
-					tempBlock.uBlock = blocks[j-1][i];
+					tempBlock.sideBlocks[1] = blocks[j-1][i];
 					
 					if(i + 1 < width)
-						tempBlock.upRBlock = blocks[j-1][i+1];
+						tempBlock.sideBlocks[2] = blocks[j-1][i+1];
 					
 					if(i - 1 > -1)
-						tempBlock.upLBlock = blocks[j-1][i-1];
+						tempBlock.sideBlocks[0] = blocks[j-1][i-1];
 				}
 				
 				if(j + 1 < height)
 				{
-					tempBlock.dBlock = blocks[j+1][i];
+					tempBlock.sideBlocks[5] = blocks[j+1][i];
 					
 					if(i + 1 < width)
-						tempBlock.downRBlock = blocks[j+1][i+1];
+						tempBlock.sideBlocks[4] = blocks[j+1][i+1];
 					
 					if(i - 1 > -1)
-						tempBlock.downLBlock = blocks[j+1][i-1];
+						tempBlock.sideBlocks[6] = blocks[j+1][i-1];
 				}
 			}
 		}
@@ -89,6 +87,7 @@ public class RecursiveAlgorithm
 		
 		for(int i = 0; i < layers; i++)
 		{
+			currentLayer.clear();
 			currentLayer = (ArrayList<Block>) nextLayer.clone();
 			nextLayer.clear();
 			markLayers(currentLayer, nextLayer);
