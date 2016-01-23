@@ -12,13 +12,7 @@ public class Block
 	Block sideBlocks[] = new Block[8];
 	
 	public void markValues()
-<<<<<<< HEAD
 	{		
-=======
-	{
-		Block blocks[] = getSideBlocks();
-		
->>>>>>> origin/master
 		for(int i = 0; i < 8; i++)
 		{
 			if(sideBlocks[i] != null && sideBlocks[i].previousLayer == false && sideBlocks[i].currentLayer == true)
