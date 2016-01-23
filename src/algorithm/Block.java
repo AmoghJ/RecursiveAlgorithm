@@ -56,35 +56,4 @@ public class Block
 		
 		return sideBlocks;
 	}
-	
-	public int getNumBlocks()
-	{
-		int i = 0;
-		
-		if(rBlock != null)
-			i++;
-		
-		if(uBlock != null)
-			i++;
-		
-		if(lBlock != null)
-			i++;
-		
-		if(dBlock != null)
-			i++;
-		
-		if(upRBlock != null)
-			i++;
-		
-		if(upLBlock != null)
-			i++;
-		
-		if(downRBlock != null)
-			i++;
-		
-		if(downLBlock != null)
-			i++;
-		
-		return i;
-	}
 }
