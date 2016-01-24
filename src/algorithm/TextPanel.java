@@ -27,7 +27,7 @@ public class TextPanel extends JPanel implements ActionListener, PropertyChangeL
  
         GridBagConstraints c = new GridBagConstraints();
         
-        JTextArea text = new JTextArea("File Location");
+        JLabel text = new JLabel("File Location");
         c.gridx = 0;
         c.gridy = 0;
         add(text, c);
@@ -40,7 +40,7 @@ public class TextPanel extends JPanel implements ActionListener, PropertyChangeL
         c.gridy = 0;
         add(textFieldLoc, c);
         
-        JTextArea textWidth = new JTextArea("Width");
+        JLabel textWidth = new JLabel("Width");
         c.gridx = 0;
         c.gridy = 1;
         add(textWidth, c);
@@ -53,7 +53,7 @@ public class TextPanel extends JPanel implements ActionListener, PropertyChangeL
         c.gridy = 1;
         add(textFieldWidth, c);
         
-        JTextArea textHeight = new JTextArea("Height");
+        JLabel textHeight = new JLabel("Height");
         c.gridx = 0;
         c.gridy = 2;
         add(textHeight, c);
@@ -66,7 +66,7 @@ public class TextPanel extends JPanel implements ActionListener, PropertyChangeL
         c.gridy = 2;
         add(textFieldHeight, c);
         
-        JTextArea textPosX = new JTextArea("Position X");
+        JLabel textPosX = new JLabel("Position X");
         c.gridx = 0;
         c.gridy = 3;
         add(textPosX, c);
@@ -79,7 +79,7 @@ public class TextPanel extends JPanel implements ActionListener, PropertyChangeL
         c.gridy = 3;
         add(textFieldPosX, c);
         
-        JTextArea textPosY = new JTextArea("Position Y");
+        JLabel textPosY = new JLabel("Position Y");
         c.gridx = 0;
         c.gridy = 4;
         add(textPosY, c);
